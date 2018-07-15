@@ -1,31 +1,31 @@
 ###################################################################################################
-#  TITLE: decoder.py																			  #
-#																								  #
+#  TITLE: decoder.py										  #
+#												  #
 #  DESCRIPTION: Given an encoded message of integers such that a = 1, b = 2...                    #
 #               return all possible decoded messages that integer could be.                       #
-#               For example, 111 could be ak(1,11) ka(11,1) or aaa(111). 						  #
-#               This is done by constructing a tree starting with Node 'S' 						  #
-#               with every child Node either being the next ones place number 					  #
-#               in the message or the next 10s place number. All of the   						  #
-#               different paths of said tree contain all the different decoded					  #        
-#               messages. 																		  #
-#               Example tree for 111:															  #
-#                                    S															  #
-#                                  /   \														  #
-#                                 1     11  													  #
-#                                / \    														  #
-#                               1  11  1														  #
-#                              /																  #
-#                             1																	  #
-#              The program then generates all the possible paths down this tree by 				  #
-#              generating a list of  all the possible binary numbers that are the				  #
-#			   length of the message. It then uses these binary numbers as maps down			  #
-#              the tree with a 0 meaning a left turn and a 1 meaning a right turn.				  #
-#              Finally the program swaps all of the numbers with letters to get a 		 		  #
-#              list of all the decoded messages and deletes any duplicates in the list			  #
-#																								  #
-#																								  #
-#  AUTHOR: Mac Wolf			   																	  #
+#               For example, 111 could be ak(1,11) ka(11,1) or aaa(111). 			  #
+#               This is done by constructing a tree starting with Node 'S' 			  #
+#               with every child Node either being the next ones place number 			  #
+#               in the message or the next 10s place number. All of the   			  #
+#               different paths of said tree contain all the different decoded			  #        
+#               messages. 									  #
+#               Example tree for 111:								  #
+#                                    S								  #
+#                                  /   \							  #
+#                                 1     11  							  #
+#                                / \   								  #
+#                               1  11  								  #
+#                              /								  #
+#                             1									  #
+#              The program then generates all the possible paths down this tree by 		  #
+#              generating a list of  all the possible binary numbers that are the		  #
+#			   length of the message. It then uses these binary numbers as maps down  #
+#              the tree with a 0 meaning a left turn and a 1 meaning a right turn.		  #
+#              Finally the program swaps all of the numbers with letters to get a 		  #
+#              list of all the decoded messages and deletes any duplicates in the list		  #
+#												  #
+#												  #
+#  AUTHOR: Mac Wolf			  							  #
 ###################################################################################################
 
 class Node():
